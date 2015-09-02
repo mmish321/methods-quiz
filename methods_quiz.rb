@@ -27,7 +27,15 @@ module MethodsQuiz
 		
 	end
 	
-	# TODO - write icy_hot?
+	def icy_hot(temp1, temp2)
+		if temp1 < 0 || temp2 < 0
+			true
+		elsif temp1 > 100 || temp2 > 100
+			true
+		else
+			false
+		end
+	end
 	
 	# TODO - write closer_to
 
