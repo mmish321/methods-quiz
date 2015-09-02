@@ -16,7 +16,16 @@ module MethodsQuiz
 		end
 	end
 	
-	# TODO - write not_string
+	def not_string(str)
+		if str.start_with?("not")
+			str
+		else
+			n = "not"
+			word = n + str
+			word
+		end
+		
+	end
 	
 	# TODO - write icy_hot?
 	
