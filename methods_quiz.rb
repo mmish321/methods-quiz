@@ -37,9 +37,53 @@ module MethodsQuiz
 		end
 	end
 	
-	# TODO - write closer_to
+	def closer_to(given, guess1, guess2)
+		if guess1 > given && guess2 > given
+			dif1 = guess1 - given
+			dif2 = guess2 - given
+			if dif1 > dif2
+				guess2
+			elsif dif2 >dif1
+				guess1
+			else
+				0
+			end
+		elsif guess1 < given && guess2 < given
+			dif1 = given - guess1
+			dif2 = given - guess2
+			if dif1 > dif2
+				guess2
+			elsif dif2 >dif1
+				guess1
+			else
+				0
+			end
+		else
+			if guess1 > given && guess2 < given
+			dif1 = guess1 - given
+			dif2 = given - guess2
+				if dif1 > dif2
+					guess2
+				elsif dif2 >dif1
+					guess1
+				else
+					0
+				end
+			else guess1 < given && guess2 > given
+			dif1 = given - guess1
+			dif2 = guess2 - given
+				if dif1 > dif2
+					guess2
+				elsif dif2 >dif1
+					guess1
+				else
+					0
+				end
+			end
+		end
+	end
 
-	# TODO - write two_as_one?
+	
 
 	# TODO - write pig_latinify
 
