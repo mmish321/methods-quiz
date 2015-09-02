@@ -83,7 +83,23 @@ module MethodsQuiz
 		end
 	end
 
-	
+	def two_as_one(int1,int2,int3)
+		dif1and2 = int1 - int2
+		dif1and3 = int1 - int3
+		dif2and1 = int2 - int1
+		dif2and3 = int2 - int3
+		dif3and1 = int3 - int1
+		dif3and2 = int3 - int2
+		if dif1and2 + dif1and3 == int1
+			true
+		elsif dif3and2 + dif3and1 == int3
+			true
+		elsif dif2and3 + dif2and1 == int2
+			true
+		else
+			false
+		end
+	end
 
 	# TODO - write pig_latinify
 
