@@ -101,6 +101,10 @@ module MethodsQuiz
 		end
 	end
 
-	# TODO - write pig_latinify
+	def pig_latinify(str)
+		str = str.downcase
+		str = str.strip
+		
+
 
 end
