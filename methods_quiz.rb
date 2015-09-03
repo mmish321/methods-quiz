@@ -104,7 +104,25 @@ module MethodsQuiz
 	def pig_latinify(str)
 		str = str.downcase
 		str = str.strip
-		
-
-
+		if str == "fuck" || str == "shit" || str == "damn" || str == "motherfucker" || str == "asshole" || str == "jackass" || str == "crap" || str == "god damn" || str == "cunt"
+			r = ""
+			for i in 0..str.length-1
+				if "aeiou".include?(str[i])
+					r+='*'
+				else
+					r+=str[i]
+				end
+			end
+			r
+		else
+			if str.start_with?('a') || str.start_with?('e') || str.start_with?('i') || str.start_with?('o') || str.start_with?('u') || str.start_with?('y')
+				str = str + 'way'
+				str
+			else
+				firstword = str[0]
+				str = str[1..-1]
+				str + firstword + "ay"
+			end
+		end
+	end	
 end
