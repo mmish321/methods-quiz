@@ -31,13 +31,18 @@ class MethodsQuizTest < MiniTest::Test
 	def test_closer_to
 		assert_equal 5, @m.closer_to(3,6,5)
 		assert_equal 0, @m.closer_to(4,3,5)
+		assert_equal -1, @m.closer_to(0,-1,-2)
 	end
 	def test_two_as_one
 		assert_equal true, @m.two_as_one(3,2,1)
 		assert_equal false, @m.two_as_one(5,4,6)
+		assert_equal true, @m.two_as_one(-4,-1,-3)
 	end
 	def test_pig_latinify
 		assert_equal "appleway", @m.pig_latinify("apple")
 		assert_equal "ookcay", @m.pig_latinify("cook")
 		assert_equal "sh*t", @m.pig_latinify("shit")
+		assert_equal "f*ck", @m.pig_latinify("FuCk")
+		assert_equal "earway", @m.pig_latinify("EAR")
+	end
 end
